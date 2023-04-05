@@ -92,3 +92,141 @@ h6 {
 }
 
 /*--------------------*/
+body {
+  background-color: #F3EEE8;
+}
+
+.wrapper {
+  padding: 0px 0px 0px 150px;
+  overflow: hidden;
+}
+
+.hello__body {
+  position: relative;
+}
+.hello__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 55px;
+  left: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hello__header::after {
+  content: url(../img/contact.svg);
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+.hello__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.hello__text {
+  max-width: 320px;
+  padding: 215px 0px 0px 0px;
+}
+.hello__uptitle {
+  color: #A06056;
+  margin: 0px 0px 50px 0px;
+  font-family: "Varta";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 143%;
+  letter-spacing: 1px;
+}
+.hello__title {
+  color: #A06056;
+  margin: 0px 0px 30px 0px;
+  font-family: "Merriweather";
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 140%;
+  letter-spacing: -0.4px;
+}
+.hello__subtitle {
+  color: rgba(112, 100, 88, 0.9);
+  margin: 0px 0px 48px 0px;
+  font-family: "Varta";
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 140%;
+}
+.hello__arrow {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #A06056;
+  border-radius: 50%;
+}
+.hello__link {
+  display: block;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+.hello__link::before {
+  content: url(../img/arrow.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.hello__img {
+  max-width: 48%;
+  overflow: hidden;
+}
+.hello__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  color: #A06056;
+  margin: 0px 32px 0px 0px;
+  font-family: "Merriweather";
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 74%;
+  letter-spacing: 2px;
+}
+.header__menu {
+  padding: 4px 0px 0px 0px;
+}
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__item {
+  margin: 0px 24px 0px 0px;
+}
+.header__link {
+  display: inline-block;
+  color: #706458;
+  font-family: "Varta";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+}
+.header__burger {
+  display: none;
+}

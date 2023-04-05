@@ -1,1 +1,150 @@
 @import "nullstyle.scss";
+
+body {
+    background-color: #F3EEE8;
+}
+
+.wrapper {
+    padding: 0px 0px 0px 150px;
+    overflow: hidden;
+}
+
+.hello {
+
+    &__block {}
+
+    &__body {
+        position: relative;
+    }
+
+    &__header {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 55px;
+        left: 0;
+        align-items: center;
+
+        &::after {
+            content: url(../img/contact.svg);
+            position: absolute;
+            top: 0;
+            right: 50px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        max-width: 320px;
+        padding: 215px 0px 0px 0px;
+    }
+
+    &__uptitle {
+        color: #A06056;
+        margin: 0px 0px 50px 0px;
+        font-family: 'Varta';
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 143%;
+        letter-spacing: 1px;
+    }
+
+    &__title {
+        color: #A06056;
+        margin: 0px 0px 30px 0px;
+        font-family: 'Merriweather';
+        font-size: 50px;
+        font-weight: 300;
+        line-height: 140%;
+        letter-spacing: -0.4px;
+    }
+
+    &__subtitle {
+        color: rgba(112, 100, 88, 0.9);
+        margin: 0px 0px 48px 0px;
+        font-family: 'Varta';
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 140%;
+    }
+
+    &__arrow {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #A06056;
+        border-radius: 50%;
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        height: 100%;
+        cursor: pointer;
+
+        &::before {
+            content: url(../img/arrow.svg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__img {
+        max-width: 48%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.header {
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        color: #A06056;
+        margin: 0px 32px 0px 0px;
+        font-family: 'Merriweather';
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 74%;
+        letter-spacing: 2px;
+    }
+
+    &__menu {
+        padding: 4px 0px 0px 0px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0px 24px 0px 0px;
+    }
+
+    &__link {
+        display: inline-block;
+        color: #706458;
+        font-family: 'Varta';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 139%;
+    }
+
+    &__burger {
+        display: none;
+    }
+}
