@@ -11,7 +11,9 @@ body {
 
 .hello {
 
-    &__block {}
+    &__block {
+        margin: 0px 0px 64px 0px;
+    }
 
     &__body {
         position: relative;
@@ -65,7 +67,7 @@ body {
     }
 
     &__subtitle {
-        color: rgba(112, 100, 88, 0.9);
+        color: #7e7469;
         margin: 0px 0px 48px 0px;
         font-family: 'Varta';
         font-size: 22px;
@@ -87,7 +89,7 @@ body {
         cursor: pointer;
 
         &::before {
-            content: url(../img/arrow.svg);
+            content: url(../img/arrow-down.svg);
             position: absolute;
             top: 50%;
             left: 50%;
@@ -146,5 +148,181 @@ body {
 
     &__burger {
         display: none;
+    }
+}
+
+.slider {
+
+    &__block {
+        margin: 0px 0px 134px 0px;
+    }
+
+    &__body {}
+
+    &__title {
+        color: #706458;
+        margin: 0px 0px 48px 0px;
+        font-family: 'Merriweather';
+        font-size: 55px;
+        font-weight: 300;
+        line-height: 109%;
+        letter-spacing: -0.6px;
+    }
+
+    &__content {
+        display: flex;
+        margin: 0px 0px 48px 0px;
+    }
+
+    &__description {
+        flex: 1 0 165px;
+        width: 100%;
+        margin: 0px 24px 0px 0px;
+        color: #7e7469;
+        font-family: 'Varta';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 139%;
+    }
+
+    &__slider {}
+
+    &__navigation {
+        display: flex;
+    }
+
+    &__navigation-pagination {
+        flex: 0 1 165px;
+    }
+
+    &__pagination {
+        color: #7e7469;
+        font-family: 'Varta';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 139%;
+        opacity: 0.5;
+    }
+
+    &__navigation-button {
+        display: flex;
+        color: #A06056;
+        font-family: 'Karla';
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 125%;
+        letter-spacing: 0.3px;
+    }
+
+    &__button-prev {
+        position: relative;
+        padding: 0px 25px 0px 25px;
+        transition: 0.5s ease;
+        cursor: pointer;
+
+        &::before {
+            content: url(../img/arrow-right.svg);
+            position: absolute;
+            top: -2px;
+            left: 0;
+            transform: rotate(180deg);
+            transition: 0.25s ease;
+        }
+
+        &:hover::before {
+            left: -10px;
+        }
+
+        &:hover {
+            font-size: 21px;
+        }
+    }
+
+    &__button-next {
+        position: relative;
+        padding: 0px 25px 0px 0px;
+        transition: 0.5s ease;
+        cursor: pointer;
+
+        &::after {
+            content: url(../img/arrow-right.svg);
+            position: absolute;
+            height: 80%;
+            top: 3px;
+            right: 0;
+            transition: 0.5s ease;
+        }
+
+        &:hover::after {
+            right: -10px;
+        }
+
+        &:hover {
+            font-size: 21px;
+        }
+    }
+
+}
+
+.room-slider {
+
+    &__wrapper {}
+
+    &__slide {
+        position: relative;
+        display: flex;
+    }
+
+    &__title {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        color: #A06056;
+        font-family: 'Merriweather';
+        font-size: 55px;
+        font-weight: 400;
+        line-height: 109%;
+        letter-spacing: -0.6px;
+    }
+
+    &__image {
+        flex: 1 1 60%;
+
+        padding: 0px 32px 0px 0px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        flex: 1 1 40%;
+
+        padding: 0px 32px 0px 0px;
+        color: #7e7469;
+        font-family: 'Varta';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 139%;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+
+    &:hover {
+        font-size: 20px;
+    }
+
+    &:hover::before {
+        left: 0;
+    }
+
+    &:hover::after {
+        right: 0;
     }
 }

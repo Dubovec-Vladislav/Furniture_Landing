@@ -101,6 +101,9 @@ body {
   overflow: hidden;
 }
 
+.hello__block {
+  margin: 0px 0px 64px 0px;
+}
 .hello__body {
   position: relative;
 }
@@ -154,7 +157,7 @@ body {
   letter-spacing: -0.4px;
 }
 .hello__subtitle {
-  color: rgba(112, 100, 88, 0.9);
+  color: #7e7469;
   margin: 0px 0px 48px 0px;
   font-family: "Varta";
   font-size: 22px;
@@ -174,7 +177,7 @@ body {
   cursor: pointer;
 }
 .hello__link::before {
-  content: url(../img/arrow.svg);
+  content: url(../img/arrow-down.svg);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -229,4 +232,169 @@ body {
 }
 .header__burger {
   display: none;
+}
+
+.slider__block {
+  margin: 0px 0px 134px 0px;
+}
+.slider__title {
+  color: #706458;
+  margin: 0px 0px 48px 0px;
+  font-family: "Merriweather";
+  font-size: 55px;
+  font-weight: 300;
+  line-height: 109%;
+  letter-spacing: -0.6px;
+}
+.slider__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 48px 0px;
+}
+.slider__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 165px;
+          flex: 1 0 165px;
+  width: 100%;
+  margin: 0px 24px 0px 0px;
+  color: #7e7469;
+  font-family: "Varta";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 139%;
+}
+.slider__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slider__navigation-pagination {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 165px;
+          flex: 0 1 165px;
+}
+.slider__pagination {
+  color: #7e7469;
+  font-family: "Varta";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+  opacity: 0.5;
+}
+.slider__navigation-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #A06056;
+  font-family: "Karla";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0.3px;
+}
+.slider__button-prev {
+  position: relative;
+  padding: 0px 25px 0px 25px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.slider__button-prev::before {
+  content: url(../img/arrow-right.svg);
+  position: absolute;
+  top: -2px;
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+.slider__button-prev:hover::before {
+  left: -10px;
+}
+.slider__button-prev:hover {
+  font-size: 21px;
+}
+.slider__button-next {
+  position: relative;
+  padding: 0px 25px 0px 0px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.slider__button-next::after {
+  content: url(../img/arrow-right.svg);
+  position: absolute;
+  height: 80%;
+  top: 3px;
+  right: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.slider__button-next:hover::after {
+  right: -10px;
+}
+.slider__button-next:hover {
+  font-size: 21px;
+}
+
+.room-slider__slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.room-slider__title {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #A06056;
+  font-family: "Merriweather";
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 109%;
+  letter-spacing: -0.6px;
+}
+.room-slider__image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 60%;
+          flex: 1 1 60%;
+  padding: 0px 32px 0px 0px;
+}
+.room-slider__image img {
+  width: 100%;
+}
+.room-slider__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
+  padding: 0px 32px 0px 0px;
+  color: #7e7469;
+  font-family: "Varta";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}
+.swiper-button-disabled:hover {
+  font-size: 20px;
+}
+.swiper-button-disabled:hover::before {
+  left: 0;
+}
+.swiper-button-disabled:hover::after {
+  right: 0;
 }
