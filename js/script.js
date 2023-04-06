@@ -18,13 +18,10 @@ let myImageSlider = new Swiper('.slider__slider', {
         pageUpDown: true,
     },
 
-    mousewheel: {
-        sensitivity: 1,
-    },
-
     // autoplay: {
     //     delay: 2000,
     // },
+
     speed: 1000,
     autoHeight: false,
 
@@ -37,4 +34,9 @@ let myImageSlider = new Swiper('.slider__slider', {
         },
     },
 
+});
+
+SmoothScroll({
+    stepSize: 60,
+    animationTime: 500,
 });
