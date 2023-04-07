@@ -261,10 +261,10 @@ body {
   display: none;
 }
 
-.slider__block {
+.room__block {
   margin: 0px 0px 134px 0px;
 }
-.slider__title {
+.room__title {
   color: #706458;
   margin: 0px 0px 48px 0px;
   font-family: "Merriweather";
@@ -273,13 +273,13 @@ body {
   line-height: 109%;
   letter-spacing: -0.6px;
 }
-.slider__content {
+.room__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0px 0px 48px 0px;
 }
-.slider__description {
+.room__description {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 165px;
           flex: 1 0 165px;
@@ -291,17 +291,17 @@ body {
   font-size: 18px;
   line-height: 139%;
 }
-.slider__navigation {
+.room__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.slider__navigation-pagination {
+.room__navigation-pagination {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 165px;
           flex: 0 1 165px;
 }
-.slider__pagination {
+.room__pagination {
   color: #7e7469;
   font-family: "Varta";
   font-size: 18px;
@@ -309,7 +309,7 @@ body {
   line-height: 139%;
   opacity: 0.5;
 }
-.slider__navigation-button {
+.room__navigation-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,14 +320,14 @@ body {
   line-height: 125%;
   letter-spacing: 0.3px;
 }
-.slider__button-prev {
+.room__button-prev {
   position: relative;
   padding: 0px 25px 0px 25px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   cursor: pointer;
 }
-.slider__button-prev::before {
+.room__button-prev::before {
   content: url(../img/arrow-right.svg);
   position: absolute;
   top: -2px;
@@ -337,20 +337,20 @@ body {
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
 }
-.slider__button-prev:hover::before {
+.room__button-prev:hover::before {
   left: -10px;
 }
-.slider__button-prev:hover {
+.room__button-prev:hover {
   font-size: 21px;
 }
-.slider__button-next {
+.room__button-next {
   position: relative;
   padding: 0px 25px 0px 0px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   cursor: pointer;
 }
-.slider__button-next::after {
+.room__button-next::after {
   content: url(../img/arrow-right.svg);
   position: absolute;
   height: 80%;
@@ -359,10 +359,10 @@ body {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-.slider__button-next:hover::after {
+.room__button-next:hover::after {
   right: -10px;
 }
-.slider__button-next:hover {
+.room__button-next:hover {
   font-size: 21px;
 }
 

@@ -1,12 +1,12 @@
-let myImageSlider = new Swiper('.slider__slider', {
+let myImageSlider = new Swiper('.room__slider', {
 
     navigation: {
-        prevEl: '.slider__button-prev',
-        nextEl: '.slider__button-next',
+        prevEl: '.room__button-prev',
+        nextEl: '.room__button-next',
     },
 
     pagination: {
-        el: '.slider__pagination',
+        el: '.room__pagination',
         type: 'fraction',
     },
 
