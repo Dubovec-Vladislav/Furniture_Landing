@@ -244,19 +244,6 @@ body {
 .header__item {
   margin: 0px 24px 0px 0px;
 }
-.header__link {
-  display: inline-block;
-  color: #706458;
-  font-family: "Varta";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 139%;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-.header__link:hover {
-  text-decoration: underline;
-}
 .header__burger {
   display: none;
 }
@@ -450,6 +437,13 @@ body {
   font-weight: 300;
   line-height: 109%;
   letter-spacing: -0.6px;
+  -webkit-animation: move 40s infinite;
+          animation: move 40s infinite;
+}
+.about__link {
+  display: inline-block;
+  -webkit-animation: move 10s infinite;
+          animation: move 10s infinite;
 }
 .about__right {
   -webkit-box-flex: 1;
@@ -471,6 +465,70 @@ body {
           flex: 1 1 50%;
   padding: 0 14.5px;
 }
+.about__item {
+  -webkit-animation: move 20s infinite;
+          animation: move 20s infinite;
+}
+.about__item_1 {
+  -webkit-animation: move 20s infinite;
+          animation: move 20s infinite;
+}
+.about__item_2 {
+  -webkit-animation: move 20s infinite 1s;
+          animation: move 20s infinite 1s;
+}
+.about__item_3 {
+  -webkit-animation: move 20s infinite 2s;
+          animation: move 20s infinite 2s;
+}
+.about__item_4 {
+  -webkit-animation: move 20s infinite 3s;
+          animation: move 20s infinite 3s;
+}
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  25% {
+    -webkit-transform: translate(10%, -10%);
+            transform: translate(10%, -10%);
+  }
+  50% {
+    -webkit-transform: translate(20%, 0%);
+            transform: translate(20%, 0%);
+  }
+  75% {
+    -webkit-transform: translate(10%, 10%);
+            transform: translate(10%, 10%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+@keyframes move {
+  0% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+  25% {
+    -webkit-transform: translate(10%, -10%);
+            transform: translate(10%, -10%);
+  }
+  50% {
+    -webkit-transform: translate(20%, 0%);
+            transform: translate(20%, 0%);
+  }
+  75% {
+    -webkit-transform: translate(10%, 10%);
+            transform: translate(10%, 10%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
 .about__item-title {
   color: #A06056;
   margin: 0px 0px 12px 0px;
@@ -488,6 +546,19 @@ body {
   line-height: 139%;
 }
 
+.link {
+  display: inline-block;
+  color: #706458;
+  font-family: "Varta";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.link:hover {
+  text-decoration: underline;
+}
 .link__more {
   position: relative;
   color: #A06056;
@@ -706,7 +777,7 @@ body {
   left: 53%;
 }
 .trends__navigation-pagination {
-  padding: 0px 19% 0px 0px;
+  padding: 0px 16% 0px 0px;
 }
 .trends__pagination {
   color: #7e7469;

@@ -156,19 +156,7 @@ body {
         margin: 0px 24px 0px 0px;
     }
 
-    &__link {
-        display: inline-block;
-        color: #706458;
-        font-family: 'Varta';
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 139%;
-        transition: 0.5s ease;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    &__link {}
 
     &__burger {
         display: none;
@@ -375,9 +363,13 @@ body {
         font-weight: 300;
         line-height: 109%;
         letter-spacing: -0.6px;
+        animation: move 40s infinite;
     }
 
-    &__link {}
+    &__link {
+        display: inline-block;
+        animation: move 10s infinite;
+    }
 
     &__right {
         flex: 1 1 50%;
@@ -396,7 +388,47 @@ body {
         padding: 0 14.5px;
     }
 
-    &__item {}
+    &__item {
+        animation: move 20s infinite;
+
+        &_1 {
+            animation: move 20s infinite;
+        }
+
+        &_2 {
+            animation: move 20s infinite 1s;
+        }
+
+        &_3 {
+            animation: move 20s infinite 2s;
+        }
+
+        &_4 {
+            animation: move 20s infinite 3s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0%, 0%);
+            }
+
+            25% {
+                transform: translate(10%, -10%);
+            }
+
+            50% {
+                transform: translate(20%, 0%);
+            }
+
+            75% {
+                transform: translate(10%, 10%);
+            }
+
+            100% {
+                transform: translate(0%, 0%);
+            }
+        }
+    }
 
     &__item-title {
         color: #A06056;
@@ -418,6 +450,17 @@ body {
 }
 
 .link {
+    display: inline-block;
+    color: #706458;
+    font-family: 'Varta';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 139%;
+    transition: 0.5s ease;
+
+    &:hover {
+        text-decoration: underline;
+    }
 
     &__more {
         position: relative;
@@ -652,7 +695,7 @@ body {
     }
 
     &__navigation-pagination {
-        padding: 0px 19% 0px 0px;
+        padding: 0px 16% 0px 0px;
     }
 
     &__pagination {
