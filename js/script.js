@@ -1,4 +1,4 @@
-let myImageSlider = new Swiper('.room__slider', {
+let myRoomSlider = new Swiper('.room__slider', {
 
     navigation: {
         prevEl: '.room__button-prev',
@@ -23,7 +23,6 @@ let myImageSlider = new Swiper('.room__slider', {
     // },
 
     speed: 1000,
-    autoHeight: false,
 
     breakpoints: {
         480: {
@@ -39,4 +38,44 @@ let myImageSlider = new Swiper('.room__slider', {
 SmoothScroll({
     stepSize: 60,
     animationTime: 500,
+});
+
+let myTrendsSlider = new Swiper('.trends__slider', {
+
+    navigation: {
+        prevEl: '.trends__button-prev',
+        nextEl: '.trends__button-next',
+    },
+
+    pagination: {
+        el: '.trends__pagination',
+        type: 'fraction',
+    },
+
+    grabCursor: true,
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+
+    // autoplay: {
+    //     delay: 2000,
+    // },
+
+    speed: 1000,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        480: {
+            slidesPerView: 1.7,
+        },
+        992: {
+            slidesPerView: 2.7,
+        },
+    },
+
 });

@@ -1,5 +1,7 @@
 @import "nullstyle.scss";
 
+// #7e7469
+
 html {
     scroll-behavior: smooth;
 }
@@ -9,7 +11,7 @@ body {
 }
 
 .wrapper {
-    padding: 0px 0px 0px 10%;
+    padding: 0px 0px 0px 10vw;
     overflow: hidden;
     position: relative;
 }
@@ -350,7 +352,9 @@ body {
 
 .about {
 
-    &__block {}
+    &__block {
+        margin: 0px 0px 70px 0px;
+    }
 
     &__body {
         display: flex;
@@ -359,7 +363,6 @@ body {
 
     &__left {
         flex: 1 1 50%;
-        margin: 0px 0px 140px 0px;
         padding: 0px 48px 0px 0px;
     }
 
@@ -414,9 +417,9 @@ body {
     }
 }
 
-.more {
+.link {
 
-    &__link {
+    &__more {
         position: relative;
         color: #A06056;
         padding: 0px 15px 0px 0px;
@@ -436,11 +439,249 @@ body {
         }
 
         &:hover::after {
-            right: -3px;
+            right: -5px;
+            opacity: 0.75;
+
         }
 
         &:hover {
-            font-size: 17.5px;
+            opacity: 0.75;
         }
     }
+}
+
+.trends {
+
+    &__block {
+        margin: 0px 0px 0px -10vw;
+        padding: 70px 0px 70px 10vw;
+        background-color: #fff;
+    }
+
+    &__body {}
+
+    &__header {
+        display: flex;
+        max-width: 90%;
+        margin: 0px 0px 64px 0px;
+        justify-content: space-between;
+        align-items: center;
+        flex: 50%;
+    }
+
+    &__left {
+        flex-grow: 1;
+    }
+
+    &__title {
+        color: #121212;
+        margin: 0px 0px 15px 0px;
+        font-family: 'Merriweather';
+        font-size: 35px;
+        font-weight: 300;
+        line-height: 114%;
+        letter-spacing: -0.3px;
+    }
+
+    &__subtitle {
+        color: #7e7469;
+        margin: 0px 0px 10px 0px;
+        font-family: 'Varta';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 139%;
+    }
+
+    &__link {
+        display: inline-block;
+
+        &::after {
+            top: 0;
+        }
+    }
+
+    &__right {
+        flex: 0 1 45%;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        width: 100%;
+        background-color: #F3EEE84D;
+        color: #706458e6;
+        margin: 0px 18px 0px 0px;
+        padding: 0px 0px 0px 15px;
+        transition: 0.5s ease;
+
+        font-family: 'Varta';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+
+        &:focus {
+            box-shadow: 0 0 10px #F3EEE8;
+        }
+    }
+
+    &__btn {
+        background: #534B42;
+        color: #FFFFFF;
+        padding: 2% 8%;
+        border-radius: 1px;
+        transition: 0.5s ease;
+
+        font-family: 'Karla';
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 147%;
+        letter-spacing: 0.3px;
+
+
+        &:hover {
+            border-radius: 10px;
+        }
+    }
+
+    &__slider {
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__footer {
+        display: flex;
+        max-width: 91.5%;
+    }
+
+    &__footer-title {
+        flex: 30%;
+        margin-right: 3%;
+        color: #534B42;
+        font-family: 'Merriweather';
+        font-size: 45px;
+        font-weight: 300;
+        line-height: 89%;
+        letter-spacing: -0.3px;
+    }
+
+    &__footer-text {
+        flex: 30%;
+        color: #706458;
+        font-family: 'Varta';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 139%;
+    }
+
+    &__navigation {
+        flex: 40%;
+        padding: 0px 11% 0px 0px;
+        text-align: right;
+    }
+
+    &__navigation-button {
+        display: flex;
+        justify-content: right;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__button-prev,
+    &__button-next {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #A06056;
+        border-radius: 50%;
+        transition: 0.5s ease;
+
+        &::before {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            transition: 0.5s ease;
+        }
+
+        &:hover {
+            background-color: #A06056;
+        }
+
+        &:hover::before {
+            filter: brightness(0) invert(1);
+        }
+
+        &.swiper-button-disabled {
+            &:hover {
+                background-color: #fff;
+            }
+
+            &:hover::before {
+                filter: none;
+            }
+        }
+    }
+
+    &__button-prev {
+        margin: 0px 11px 0px 0px;
+
+        &::before {
+            content: url(../img/arrow-left.svg);
+            top: 52%;
+            left: 47%;
+        }
+
+        &.swiper-button-disabled {
+            &:hover::before {
+                left: 47%;
+            }
+        }
+    }
+
+    &__button-next {
+        &::before {
+            content: url(../img/arrow-right.svg);
+            top: 52%;
+            left: 53%;
+        }
+
+        &.swiper-button-disabled {
+            &:hover::before {
+                left: 53%;
+            }
+        }
+    }
+
+    &__navigation-pagination {
+        padding: 0px 19% 0px 0px;
+    }
+
+    &__pagination {
+        color: #7e7469;
+        font-family: 'Varta';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 139%;
+        opacity: 0.5;
+    }
+}
+
+.trends-slider {
+
+    &__wrapper {}
+
+    &__slide {
+        padding: 0px 2% 0px 0px;
+    }
+
+    &__image {
+        height: 65vh;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {}
 }
