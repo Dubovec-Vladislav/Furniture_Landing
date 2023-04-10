@@ -141,9 +141,9 @@ body {
 }
 .hello__text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 320px;
-          flex: 0 1 320px;
-  padding: 215px 0px 0px 0px;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
+  padding: 15% 0px 0px 0px;
 }
 .hello__uptitle {
   color: #A06056;
@@ -222,16 +222,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.header__logo {
-  color: #A06056;
-  margin: 0px 32px 0px 0px;
-  font-family: "Merriweather";
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 74%;
-  letter-spacing: 2px;
-  text-transform: lowercase;
 }
 .header__menu {
   padding: 4px 0px 0px 0px;
@@ -587,6 +577,17 @@ body {
   opacity: 0.75;
 }
 
+.logo {
+  color: #A06056;
+  margin: 0px 32px 0px 0px;
+  font-family: "Merriweather";
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 74%;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
 .trends__block {
   margin: 0px 0px 0px -10vw;
   padding: 70px 0px 70px 10vw;
@@ -799,4 +800,146 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.footer__block {
+  margin: 0px 0px 64px 0px;
+}
+.footer__body {
+  padding: 5% 10% 0px 0px;
+}
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 40px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer__logo {
+  -webkit-box-flex: 5%;
+      -ms-flex: 5%;
+          flex: 5%;
+  color: #534B42;
+  margin: 0px 0px 40px 0px;
+  padding: 0px 64px 0px 0px;
+}
+.footer__menu {
+  -webkit-box-flex: 65%;
+      -ms-flex: 65%;
+          flex: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px -24px 0px -24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer__menu-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  margin: 0px 0px 40px 0px;
+  padding: 0 24px;
+}
+.footer__menu-title {
+  color: #534B42;
+  margin: 0px 0px 22px 0px;
+  font-family: "Varta";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.2px;
+}
+.footer__menu-link {
+  display: block;
+  margin: 0px 0px 12px 0px;
+  white-space: nowrap;
+}
+.footer__menu-link:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.footer__news {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+}
+.footer__news-title {
+  color: #534B42;
+  margin: 0px 0px 24px 0px;
+  font-family: "Varta";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.2px;
+}
+.footer__news-img {
+  margin: 0px 0px 15px 0px;
+  overflow: hidden;
+}
+.footer__news-img img {
+  width: 100%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.footer__news-img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.footer__news-text {
+  color: #706458;
+  margin: 0px 0px 15px 0px;
+  font-family: "Varta";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 156%;
+}
+.footer__link {
+  display: inline-block;
+}
+.footer__link::after {
+  top: 1px;
+}
+.footer__social-links {
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+}
+.footer__social-link {
+  color: rgba(112, 100, 88, 0.7019607843);
+  margin: 0px 24px 0px 0px;
+  font-size: 32px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.footer__social-link:hover {
+  -webkit-transform: translate(0px, -25%);
+          transform: translate(0px, -25%);
+}
+.footer__social-inf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__social-year {
+  color: rgba(112, 100, 88, 0.7019607843);
+  font-family: "Varta";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+}
+.footer__policy-link {
+  color: rgba(112, 100, 88, 0.7019607843);
+  margin: 0px 0px 0px 30px;
+  font-family: "Varta";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+}
+.footer__policy-link:hover {
+  text-decoration: underline;
 }
