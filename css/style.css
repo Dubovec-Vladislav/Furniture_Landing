@@ -537,7 +537,8 @@ body {
 }
 
 .link {
-  display: inline-block;
+  position: relative;
+  display: inline;
   color: #706458;
   font-family: "Varta";
   font-size: 18px;
@@ -546,8 +547,19 @@ body {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-.link:hover {
-  text-decoration: underline;
+.link:after {
+  content: "";
+  position: absolute;
+  background-color: #A06056;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.link:hover:after {
+  width: 100%;
 }
 .link__more {
   position: relative;
@@ -854,6 +866,9 @@ body {
   display: block;
   margin: 0px 0px 12px 0px;
   white-space: nowrap;
+}
+.footer__menu-link:hover:after {
+  width: 50%;
 }
 .footer__menu-link:last-child {
   margin: 0px 0px 0px 0px;

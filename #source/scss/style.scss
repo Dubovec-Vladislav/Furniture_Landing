@@ -441,7 +441,8 @@ body {
 }
 
 .link {
-    display: inline-block;
+    position: relative;
+    display: inline;
     color: #706458;
     font-family: 'Varta';
     font-size: 18px;
@@ -449,8 +450,19 @@ body {
     line-height: 139%;
     transition: 0.5s ease;
 
-    &:hover {
-        text-decoration: underline;
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #A06056;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        transition: 0.5s ease;
+    }
+
+    &:hover:after {
+        width: 100%;
     }
 
     &__more {
@@ -783,6 +795,10 @@ body {
         display: block;
         margin: 0px 0px 12px 0px;
         white-space: nowrap;
+
+        &:hover:after {
+            width: 50%;
+        }
 
         &:last-child {
             margin: 0px 0px 0px 0px;
