@@ -9,7 +9,7 @@ let myRoomSlider = new Swiper('.room__slider', {
         el: '.room__pagination',
         type: 'fraction',
     },
-
+    spaceBetween: 32,
     grabCursor: true,
 
     keyboard: {

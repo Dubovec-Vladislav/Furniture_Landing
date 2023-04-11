@@ -143,7 +143,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 35%;
           flex: 0 1 35%;
-  padding: 15% 0px 0px 0px;
+  padding: 30vh 0px 0px 0px;
 }
 .hello__uptitle {
   color: #A06056;
@@ -239,7 +239,7 @@ body {
 }
 
 .room__block {
-  margin: 0px 0px 134px 0px;
+  margin: 0px 0px 70px 0px;
 }
 .room__title {
   color: #706458;
@@ -255,18 +255,26 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0px 0px 48px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .room__description {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 165px;
-          flex: 1 0 165px;
-  width: 100%;
-  margin: 0px 24px 0px 0px;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
   color: #7e7469;
+  min-width: 140px;
+  padding: 0px 24px 0px 0px;
+  margin: 0px 0px 33px 0px;
   font-family: "Varta";
   font-weight: 400;
   font-size: 18px;
   line-height: 139%;
+}
+.room__slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 85%;
+          flex: 1 1 85%;
 }
 .room__navigation {
   display: -webkit-box;
@@ -348,6 +356,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .room-slider__title {
   position: absolute;
@@ -373,6 +383,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 60%;
           flex: 1 1 60%;
+  margin: 0px 0px 33px 0px;
   padding: 0px 32px 0px 0px;
 }
 .room-slider__image img {
@@ -380,14 +391,19 @@ body {
 }
 .room-slider__description {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
-  padding: 0px 32px 0px 0px;
+      -ms-flex: 1 0 40%;
+          flex: 1 0 40%;
   color: #7e7469;
+  min-width: 200px;
   font-family: "Varta";
   font-size: 18px;
   font-weight: 400;
   line-height: 139%;
+}
+@media (max-width: 555px) {
+  .room-slider__description {
+    padding: 0px 32px 0px 0px;
+  }
 }
 
 .swiper-button-disabled {
@@ -405,12 +421,15 @@ body {
 
 .about__block {
   margin: 0px 0px 70px 0px;
+  padding: 64px 0px 0px 0px;
 }
 .about__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0px 11% 0px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .about__left {
   -webkit-box-flex: 1;
@@ -419,7 +438,8 @@ body {
   padding: 0px 48px 0px 0px;
 }
 .about__title {
-  max-width: 458px;
+  max-width: 420px;
+  min-width: 310px;
   color: #706458;
   margin: 0px 0px 30px 0px;
   font-family: "Merriweather";
@@ -432,6 +452,7 @@ body {
 }
 .about__link {
   display: inline-block;
+  margin: 0px 0px 40px 0px;
   -webkit-animation: move 10s infinite;
           animation: move 10s infinite;
 }
@@ -447,15 +468,18 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 -14.5px;
-  padding: 15px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .about__column {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+  margin: 0px 0px 40px 0px;
   padding: 0 14.5px;
 }
 .about__item {
+  min-width: 200px;
   -webkit-animation: move 20s infinite;
           animation: move 20s infinite;
 }
@@ -611,20 +635,19 @@ body {
   display: flex;
   max-width: 90%;
   margin: 0px 0px 64px 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
 }
 .trends__left {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1 1 60%;
+          flex: 1 1 60%;
 }
 .trends__title {
   color: #121212;
@@ -645,26 +668,36 @@ body {
 }
 .trends__link {
   display: inline-block;
+  margin: 0px 0px 32px 0px;
 }
 .trends__link::after {
   top: 0;
 }
 .trends__right {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 45%;
-          flex: 0 1 45%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
+  min-width: 375px;
 }
 .trends__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .trends__input {
-  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 65%;
+          flex: 0 1 65%;
   background-color: rgba(243, 238, 232, 0.3019607843);
   color: rgba(112, 100, 88, 0.9019607843);
-  margin: 0px 18px 0px 0px;
-  padding: 0px 0px 0px 15px;
+  min-width: 310px;
+  margin: 0px 0px 16px 0px;
+  padding: 12px 0px 12px 15px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   font-family: "Varta";
@@ -677,21 +710,38 @@ body {
   -webkit-box-shadow: 0 0 10px #F3EEE8;
           box-shadow: 0 0 10px #F3EEE8;
 }
+@media (max-width: 555px) {
+  .trends__input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 65%;
+            flex: 1 1 65%;
+  }
+}
 .trends__btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
   background: #534B42;
   color: #FFFFFF;
-  padding: 2% 8%;
+  max-height: 50px;
+  padding: 18px;
   border-radius: 1px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   font-family: "Karla";
   font-size: 17px;
   font-weight: 700;
-  line-height: 147%;
   letter-spacing: 0.3px;
 }
 .trends__btn:hover {
   border-radius: 10px;
+}
+@media (max-width: 555px) {
+  .trends__btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 65%;
+            flex: 1 1 65%;
+  }
 }
 .trends__slider {
   margin: 0px 0px 40px 0px;
@@ -701,12 +751,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 91.5%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .trends__footer-title {
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
           flex: 30%;
-  margin-right: 3%;
+  padding: 0px 10px 0px 0px;
   color: #534B42;
   font-family: "Merriweather";
   font-size: 45px;
@@ -828,17 +880,17 @@ body {
       flex-wrap: wrap;
 }
 .footer__logo {
-  -webkit-box-flex: 5%;
-      -ms-flex: 5%;
-          flex: 5%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 5%;
+          flex: 1 1 5%;
   color: #534B42;
   margin: 0px 0px 40px 0px;
   padding: 0px 64px 0px 0px;
 }
 .footer__menu {
-  -webkit-box-flex: 65%;
-      -ms-flex: 65%;
-          flex: 65%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 65%;
+          flex: 1 1 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

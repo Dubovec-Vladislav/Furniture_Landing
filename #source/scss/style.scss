@@ -50,7 +50,7 @@ body {
 
     &__text {
         flex: 0 1 35%;
-        padding: 15% 0px 0px 0px;
+        padding: 30vh 0px 0px 0px;
     }
 
     &__uptitle {
@@ -157,7 +157,7 @@ body {
 .room {
 
     &__block {
-        margin: 0px 0px 134px 0px;
+        margin: 0px 0px 70px 0px;
     }
 
     &__body {}
@@ -175,20 +175,24 @@ body {
     &__content {
         display: flex;
         margin: 0px 0px 48px 0px;
+        flex-wrap: wrap;
     }
 
     &__description {
-        flex: 1 0 165px;
-        width: 100%;
-        margin: 0px 24px 0px 0px;
+        flex: 1 1 15%;
         color: #7e7469;
+        min-width: 140px;
+        padding: 0px 24px 0px 0px;
+        margin: 0px 0px 33px 0px;
         font-family: 'Varta';
         font-weight: 400;
         font-size: 18px;
         line-height: 139%;
     }
 
-    &__slider {}
+    &__slider {
+        flex: 1 1 85%;
+    }
 
     &__navigation {
         display: flex;
@@ -274,6 +278,7 @@ body {
     &__slide {
         position: relative;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__title {
@@ -294,6 +299,7 @@ body {
 
     &__image {
         flex: 1 1 60%;
+        margin: 0px 0px 33px 0px;
         padding: 0px 32px 0px 0px;
 
         img {
@@ -302,14 +308,17 @@ body {
     }
 
     &__description {
-        flex: 1 1 40%;
-
-        padding: 0px 32px 0px 0px;
+        flex: 1 0 40%;
         color: #7e7469;
+        min-width: 200px;
         font-family: 'Varta';
         font-size: 18px;
         font-weight: 400;
         line-height: 139%;
+
+        @media (max-width: 555px) {
+            padding: 0px 32px 0px 0px;
+        }
     }
 }
 
@@ -333,11 +342,13 @@ body {
 
     &__block {
         margin: 0px 0px 70px 0px;
+        padding: 64px 0px 0px 0px;
     }
 
     &__body {
         display: flex;
         padding: 0px 11% 0px 0px;
+        flex-wrap: wrap;
     }
 
     &__left {
@@ -346,7 +357,8 @@ body {
     }
 
     &__title {
-        max-width: 458px;
+        max-width: 420px;
+        min-width: 310px;
         color: #706458;
         margin: 0px 0px 30px 0px;
         font-family: 'Merriweather';
@@ -359,6 +371,7 @@ body {
 
     &__link {
         display: inline-block;
+        margin: 0px 0px 40px 0px;
         animation: move 10s infinite;
     }
 
@@ -371,15 +384,17 @@ body {
     &__row {
         display: flex;
         margin: 0 -14.5px;
-        padding: 15px 0px;
+        flex-wrap: wrap;
     }
 
     &__column {
         flex: 1 1 50%;
+        margin: 0px 0px 40px 0px;
         padding: 0 14.5px;
     }
 
     &__item {
+        min-width: 200px;
         animation: move 20s infinite;
 
         &_1 {
@@ -521,13 +536,13 @@ body {
         display: flex;
         max-width: 90%;
         margin: 0px 0px 64px 0px;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        flex: 50%;
     }
 
     &__left {
-        flex-grow: 1;
+        flex: 1 1 60%;
     }
 
     &__title {
@@ -551,6 +566,7 @@ body {
 
     &__link {
         display: inline-block;
+        margin: 0px 0px 32px 0px;
 
         &::after {
             top: 0;
@@ -558,19 +574,23 @@ body {
     }
 
     &__right {
-        flex: 0 1 45%;
+        flex: 1 1 40%;
+        min-width: 375px;
     }
 
     &__form {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     &__input {
-        width: 100%;
+        flex: 0 1 65%;
         background-color: #F3EEE84D;
         color: #706458e6;
-        margin: 0px 18px 0px 0px;
-        padding: 0px 0px 0px 15px;
+        min-width: 310px;
+        margin: 0px 0px 16px 0px;
+        padding: 12px 0px 12px 15px;
         transition: 0.5s ease;
 
         font-family: 'Varta';
@@ -582,24 +602,32 @@ body {
         &:focus {
             box-shadow: 0 0 10px #F3EEE8;
         }
+
+        @media (max-width: 555px) {
+            flex: 1 1 65%;
+        }
     }
 
     &__btn {
+        flex: 0 1 30%;
         background: #534B42;
         color: #FFFFFF;
-        padding: 2% 8%;
+        max-height: 50px;
+        padding: 18px;
         border-radius: 1px;
         transition: 0.5s ease;
 
         font-family: 'Karla';
         font-size: 17px;
         font-weight: 700;
-        line-height: 147%;
         letter-spacing: 0.3px;
-
 
         &:hover {
             border-radius: 10px;
+        }
+
+        @media (max-width: 555px) {
+            flex: 1 1 65%;
         }
     }
 
@@ -610,11 +638,12 @@ body {
     &__footer {
         display: flex;
         max-width: 91.5%;
+        flex-wrap: wrap;
     }
 
     &__footer-title {
         flex: 30%;
-        margin-right: 3%;
+        padding: 0px 10px 0px 0px;
         color: #534B42;
         font-family: 'Merriweather';
         font-size: 45px;
@@ -760,14 +789,14 @@ body {
     }
 
     &__logo {
-        flex: 5%;
+        flex: 1 1 5%;
         color: #534B42;
         margin: 0px 0px 40px 0px;
         padding: 0px 64px 0px 0px;
     }
 
     &__menu {
-        flex: 65%;
+        flex: 1 1 65%;
         display: flex;
         margin: 0px -24px 0px -24px;
         flex-wrap: wrap;
