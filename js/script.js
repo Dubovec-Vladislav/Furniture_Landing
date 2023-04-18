@@ -79,3 +79,21 @@ let myTrendsSlider = new Swiper('.trends__slider', {
     },
 
 });
+
+const burger = document.querySelector('.header__burger');
+const headerList = document.querySelector('.header__list');
+const body = document.querySelector('body');
+
+burger.addEventListener('click', function () {
+    burger.classList.toggle('_active');
+    headerList.classList.toggle('_active');
+    body.classList.toggle('_active');
+});
+
+const helloContent = document.querySelector('.hello__content');
+
+helloContent.addEventListener('click', function () {
+    burger.classList.remove('_active');
+    headerList.classList.remove('_active');
+    body.classList.remove('_active');
+});

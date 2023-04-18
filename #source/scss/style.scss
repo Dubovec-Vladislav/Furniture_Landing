@@ -2,18 +2,32 @@
 
 // #7e7469
 
+%white {
+    @media (max-width: 828px) {
+        color: #fff !important;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     background-color: #F3EEE8;
+
+    &._active {
+        overflow: hidden;
+    }
 }
 
 .wrapper {
     padding: 0px 0px 0px 10vw;
     overflow: hidden;
     position: relative;
+
+    @media (max-width: 828px) {
+        padding: 0px 0px 0px 0px;
+    }
 }
 
 .hello {
@@ -24,6 +38,7 @@ body {
 
     &__body {
         position: relative;
+        min-height: 667px;
     }
 
     &__header {
@@ -33,6 +48,7 @@ body {
         height: 50px;
         top: 55px;
         left: 0;
+        z-index: 50;
         align-items: center;
 
         &::after {
@@ -40,6 +56,10 @@ body {
             position: absolute;
             top: 0;
             right: 50px;
+
+            @media (max-width: 828px) {
+                display: none;
+            }
         }
     }
 
@@ -51,6 +71,14 @@ body {
     &__text {
         flex: 0 1 35%;
         padding: 30vh 0px 0px 0px;
+
+        @media (max-width: 828px) {
+            flex: 0 1 80%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
     }
 
     &__uptitle {
@@ -61,6 +89,7 @@ body {
         font-weight: 700;
         line-height: 143%;
         letter-spacing: 1px;
+        @extend %white;
     }
 
     &__title {
@@ -71,6 +100,7 @@ body {
         font-weight: 300;
         line-height: 140%;
         letter-spacing: -0.4px;
+        @extend %white;
     }
 
     &__subtitle {
@@ -80,6 +110,7 @@ body {
         font-size: 22px;
         font-weight: 300;
         line-height: 140%;
+        @extend %white;
     }
 
     &__arrow {
@@ -91,6 +122,14 @@ body {
 
         &:hover {
             background-color: #A06056;
+        }
+
+        @media (max-width: 828px) {
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            border: 2px solid #fff;
         }
     }
 
@@ -112,6 +151,10 @@ body {
         &:hover::before {
             filter: brightness(0) invert(1);
         }
+
+        @media (max-width: 828px) {
+            filter: brightness(0) invert(1);
+        }
     }
 
     &__img {
@@ -123,6 +166,14 @@ body {
             height: 100%;
             object-fit: cover;
         }
+
+        @media (max-width: 828px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
@@ -131,6 +182,11 @@ body {
     &__body {
         display: flex;
         align-items: center;
+
+        @media (max-width: 828px) {
+            width: 90%;
+            justify-content: space-between;
+        }
     }
 
     &__logo {}
@@ -141,16 +197,87 @@ body {
 
     &__list {
         display: flex;
+        transition: 1s ease;
+
+        @media (max-width: 828px) {
+            display: block;
+            position: fixed;
+            top: 0;
+            right: -50%;
+            z-index: 3;
+            height: 100%;
+            width: 50%;
+            background-color: #F3EEE8;
+            padding: 25px 0px 0px 25px;
+            opacity: 0;
+            visibility: hidden;
+
+            &._active {
+                right: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 
     &__item {
         margin: 0px 24px 0px 0px;
+
+        @media (max-width: 828px) {
+            margin: 0px 0px 0px 0px;
+            padding: 18px 32px;
+        }
     }
 
     &__link {}
 
     &__burger {
         display: none;
+
+        @media (max-width: 828px) {
+            display: block;
+            position: relative;
+            width: 32px;
+            height: 12px;
+            z-index: 3;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                opacity: 0.5;
+                transition: 0.5s ease;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            &._active::before,
+            &._active::after {
+                opacity: 1;
+                background-color: #706458;
+            }
+
+
+            &._active::before {
+                top: 5px;
+                transform: rotate(45deg);
+            }
+
+            &._active::after {
+                bottom: 5px;
+                transform: rotate(-45deg);
+            }
+        }
     }
 }
 
@@ -479,7 +606,7 @@ body {
     &:hover:after {
         width: 100%;
     }
-
+    
     &__more {
         position: relative;
         color: #A06056;
@@ -520,6 +647,11 @@ body {
     line-height: 74%;
     letter-spacing: 2px;
     text-transform: lowercase;
+
+    @media (max-width: 828px) {
+        color: #fff;
+        margin: 0px 0px 0px 32px;
+    }
 }
 
 .trends {
@@ -644,6 +776,7 @@ body {
     &__footer-title {
         flex: 30%;
         padding: 0px 10px 0px 0px;
+        margin: 0px 0px 20px 0px;
         color: #534B42;
         font-family: 'Merriweather';
         font-size: 45px;
@@ -655,22 +788,35 @@ body {
     &__footer-text {
         flex: 30%;
         color: #706458;
+        margin: 0px 0px 20px 0px;
         font-family: 'Varta';
         font-size: 18px;
         font-weight: 400;
         line-height: 139%;
+
+        @media (max-width: 555px) {
+            flex: 100%;
+        }
     }
 
     &__navigation {
         flex: 40%;
         padding: 0px 11% 0px 0px;
         text-align: right;
+
+        @media (max-width: 555px) {
+            text-align: left;
+        }
     }
 
     &__navigation-button {
         display: flex;
-        justify-content: right;
         margin: 0px 0px 20px 0px;
+        justify-content: right;
+
+        @media (max-width: 555px) {
+            justify-content: left;
+        }
     }
 
     &__button-prev,
