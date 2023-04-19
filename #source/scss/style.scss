@@ -26,7 +26,7 @@ body {
     position: relative;
 
     @media (max-width: 828px) {
-        padding: 0px 0px 0px 0px;
+        padding: 20px 0px 0px 20px;
     }
 }
 
@@ -939,6 +939,12 @@ body {
         color: #534B42;
         margin: 0px 0px 40px 0px;
         padding: 0px 64px 0px 0px;
+
+        @media (max-width: 828px) {
+            flex: 1 1 100%;
+            padding: 0px 0px 0px 0px;
+            text-align: center;
+        }
     }
 
     &__menu {
@@ -952,6 +958,10 @@ body {
         flex: 1 1 25%;
         margin: 0px 0px 40px 0px;
         padding: 0 24px;
+
+        @media (max-width: 828px) {
+            text-align: center;
+        }
     }
 
     &__menu-title {
@@ -978,10 +988,16 @@ body {
         &:last-child {
             margin: 0px 0px 0px 0px;
         }
+
+        
     }
 
     &__news {
         flex: 25%;
+
+        @media (max-width: 828px) {
+            flex: 1 1 100%;
+        }
     }
 
     &__news-title {
