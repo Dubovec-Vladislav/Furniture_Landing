@@ -26,7 +26,7 @@ body {
     position: relative;
 
     @media (max-width: 828px) {
-        padding: 20px 0px 0px 20px;
+        padding: 0px 10px 0px 10px;
     }
 }
 
@@ -34,6 +34,10 @@ body {
 
     &__block {
         margin: 0px 0px 64px 0px;
+
+        @media (max-width: 828px) {
+            margin: 0px -10px 64px -10px;
+        }
     }
 
     &__body {
@@ -126,7 +130,7 @@ body {
 
         @media (max-width: 828px) {
             position: relative;
-            top: 0;
+            top: -3%;
             left: 50%;
             transform: translate(-50%, 0%);
             border: 2px solid #fff;
@@ -432,6 +436,10 @@ body {
         img {
             width: 100%;
         }
+
+        @media (max-width: 555px) {
+            padding: 0px 0px 0px 0px;
+        }
     }
 
     &__description {
@@ -540,27 +548,27 @@ body {
             animation: move 20s infinite 3s;
         }
 
-        @keyframes move {
-            0% {
-                transform: translate(0%, 0%);
-            }
+        // @keyframes move {
+        //     0% {
+        //         transform: translate(0%, 0%);
+        //     }
 
-            25% {
-                transform: translate(10%, -10%);
-            }
+        //     25% {
+        //         transform: translate(10%, -10%);
+        //     }
 
-            50% {
-                transform: translate(20%, 0%);
-            }
+        //     50% {
+        //         transform: translate(20%, 0%);
+        //     }
 
-            75% {
-                transform: translate(10%, 10%);
-            }
+        //     75% {
+        //         transform: translate(10%, 10%);
+        //     }
 
-            100% {
-                transform: translate(0%, 0%);
-            }
-        }
+        //     100% {
+        //         transform: translate(0%, 0%);
+        //     }
+        // }
     }
 
     &__item-title {
@@ -606,7 +614,7 @@ body {
     &:hover:after {
         width: 100%;
     }
-    
+
     &__more {
         position: relative;
         color: #A06056;
@@ -657,7 +665,7 @@ body {
 .trends {
 
     &__block {
-        margin: 0px 0px 0px -10vw;
+        margin: 0px -10px 0px -10vw;
         padding: 70px 0px 70px 10vw;
         background-color: #fff;
     }
@@ -989,7 +997,7 @@ body {
             margin: 0px 0px 0px 0px;
         }
 
-        
+
     }
 
     &__news {
